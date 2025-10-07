@@ -22,3 +22,5 @@ yarn-error.log
 !api/
 !DEPLOYMENT.md
 !deploy-prep.sh
+
+.vercel
