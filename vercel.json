@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "public/index.php",
-            "use": "vercel-php@0.6.0"
+            "use": "vercel-php@0.7.0"
         }
     ],
     "routes": [
@@ -15,7 +15,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://your-app-name.vercel.app",
+        "APP_URL": "https://water-level-monitoring.vercel.app",
         "VERCEL_DEMO_MODE": "true"
     }
 }
