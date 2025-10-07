@@ -14,14 +14,6 @@
 ### 1. Prepare Your Database
 
 Since Vercel is serverless, you need a cloud database:
-
-**Option A: Supabase (PostgreSQL)**
-1. Create account at [supabase.com](https://supabase.com)
-2. Create new project
-3. Go to Settings → Database
-4. Copy your connection details
-
-**Option B: Railway (PostgreSQL)**
 1. Create account at [railway.app](https://railway.app)
 2. Create new project → Add PostgreSQL
 3. Copy connection details from Variables tab
