@@ -5,6 +5,8 @@
 /vendor
 .env
 .env.backup
+.env.local
+.env.vercel
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
@@ -13,3 +15,10 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+.vercel
+
+# Keep deployment files
+!vercel.json
+!api/
+!DEPLOYMENT.md
+!deploy-prep.sh

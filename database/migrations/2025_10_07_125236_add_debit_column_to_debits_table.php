@@ -13,10 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('curah', function (Blueprint $table) {
-            $table->id();
-            $table->decimal('curah', 8, 2); // Rainfall amount
-            $table->timestamps();
+        Schema::table('debits', function (Blueprint $table) {
+            $table->decimal('debit', 8, 2)->after('id'); // Water flow rate
         });
     }
 
@@ -27,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('curah');
+        Schema::table('debits', function (Blueprint $table) {
+            $table->dropColumn('debit');
+        });
     }
 };

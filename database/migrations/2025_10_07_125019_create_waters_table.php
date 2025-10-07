@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('curah', function (Blueprint $table) {
+        Schema::create('waters', function (Blueprint $table) {
             $table->id();
-            $table->decimal('curah', 8, 2); // Rainfall amount
+            $table->decimal('level', 8, 2); // Water level in centimeters
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('curah');
+        Schema::dropIfExists('waters');
     }
 };

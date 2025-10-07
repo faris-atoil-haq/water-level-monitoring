@@ -8,5 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Curah extends Model
 {
     use HasFactory;
+    
     protected $table = 'curah';
+    
+    protected $fillable = ['curah'];
 }

@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('debits', function (Blueprint $table) {
             $table->id();
+            $table->decimal('debit', 8, 2); // Water flow rate
             $table->timestamps();
         });
     }

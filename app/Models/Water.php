@@ -10,5 +10,6 @@ class Water extends Model
     use HasFactory;
 
     protected $table = 'waters';
-
+    
+    protected $fillable = ['level'];
 }

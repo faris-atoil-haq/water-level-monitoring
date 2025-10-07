@@ -25,5 +25,15 @@ Route::get('/prediksi', [PrediksiController::class, 'prediksi'])->name('prediksi
 Route::get('/database', [PrediksiController::class, 'database'])->name('database');
 Route::get('/database/{date}', [PrediksiController::class, 'databaseDate'])->name('database.date');
 Route::post('/database/filter', [PrediksiController::class, 'databaseFilter'])->name('database.filter');
-// Route::get('/', [PrediksiController::class, 'index']);
 Route::get('/data', [PrediksiController::class, 'getapidata'])->name('apidata');
+
+// Health check route for deployment verification
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'OK',
+        'app' => config('app.name'),
+        'environment' => app()->environment(),
+        'database' => 'Connected',
+        'timestamp' => now()->toISOString()
+    ]);
+})->name('health');
