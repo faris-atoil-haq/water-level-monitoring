@@ -17,10 +17,5 @@
         "APP_DEBUG": "false",
         "APP_URL": "https://your-app-name.vercel.app",
         "VERCEL_DEMO_MODE": "true"
-    },
-    "functions": {
-        "public/index.php": {
-            "runtime": "vercel-php@0.6.0"
-        }
     }
 }
