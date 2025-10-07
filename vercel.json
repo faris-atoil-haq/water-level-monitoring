@@ -3,7 +3,7 @@
     "framework": null,
     "builds": [
         {
-            "src": "api/index.php",
+            "src": "api/index.php"
         }
     ],
     "functions": {
