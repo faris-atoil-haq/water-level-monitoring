@@ -1,16 +1,32 @@
 {
     "version": 2,
-      "framework": null,
+    "framework": null,
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "vercel-php@0.7.4"
+        }
+    ],
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.4" }
     },
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-    }],
+    "routes": [
+        {
+            "src": "/(css|js|images|favicon\\.ico|robots\\.txt)",
+            "headers": { "cache-control": "max-age=31536000" }
+        },
+        {
+            "src": "/build/(.*)",
+            "headers": { "cache-control": "max-age=31536000" }
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_URL": "https://water-level-monitoring.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
