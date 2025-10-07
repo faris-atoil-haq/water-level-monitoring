@@ -51,19 +51,37 @@ vercel --prod
 
 In your Vercel project dashboard, go to Settings → Environment Variables and add:
 
+**🎯 Recommended for Vercel (DATABASE_URL method):**
 ```
 APP_NAME=Water Level Monitoring
 APP_ENV=production
-APP_KEY=base64:YOUR_GENERATED_KEY_HERE
+APP_KEY=base64:avsiI/KgwZ9hCAUxqzCfU+W6IX/dJDf1QYR9V/NKgJE=
+APP_DEBUG=false
+APP_URL=https://your-project-name.vercel.app
+
+DATABASE_URL=postgresql://neondb_owner:npg_Hycop8OQCsv4@ep-billowing-moon-ad4vg68z-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&options=endpoint%3Dep-billowing-moon-ad4vg68z
+
+LOG_CHANNEL=stack
+LOG_LEVEL=error
+CACHE_DRIVER=array
+SESSION_DRIVER=array
+QUEUE_CONNECTION=sync
+```
+
+**🔄 Alternative (Individual parameters method):**
+```
+APP_NAME=Water Level Monitoring
+APP_ENV=production
+APP_KEY=base64:avsiI/KgwZ9hCAUxqzCfU+W6IX/dJDf1QYR9V/NKgJE=
 APP_DEBUG=false
 APP_URL=https://your-project-name.vercel.app
 
 DB_CONNECTION=pgsql
-DB_HOST=your-database-host
-DB_PORT=5432
-DB_DATABASE=your-database-name
-DB_USERNAME=your-username
-DB_PASSWORD=your-password
+DB_HOST=ep-billowing-moon-ad4vg68z-pooler.c-2.us-east-1.aws.neon.tech
+DB_PORT=5433
+DB_DATABASE=neondb
+DB_USERNAME=neondb_owner
+DB_PASSWORD=npg_Hycop8OQCsv4
 
 LOG_CHANNEL=stack
 LOG_LEVEL=error
