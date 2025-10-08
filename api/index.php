@@ -10,6 +10,9 @@
 |
 */
 
+// Bootstrap Vercel-specific configurations
+require_once __DIR__ . '/../bootstrap/vercel.php';
+
 // Set the correct document root for Laravel
 $_SERVER['DOCUMENT_ROOT'] = __DIR__ . '/../public';
 
