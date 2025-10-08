@@ -5,13 +5,9 @@
 | Vercel Serverless Function Entry Point
 |--------------------------------------------------------------------------
 |
-| This file serves as the entry point for Vercel's serverless functions.
-| It forwards all requests to Laravel's public/index.php file.
+| Simple entry point without custom bootstrap
 |
 */
-
-// Bootstrap Vercel-specific configurations
-require_once __DIR__ . '/../bootstrap/vercel.php';
 
 // Set the correct document root for Laravel
 $_SERVER['DOCUMENT_ROOT'] = __DIR__ . '/../public';
