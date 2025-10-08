@@ -7,9 +7,17 @@
             "config": {
                 "includeFiles": "**"
             }
+        },
+        {
+            "src": "api/health.php",
+            "use": "vercel-php@0.7.4"
         }
     ],
     "routes": [
+        {
+            "src": "/health",
+            "dest": "/api/health.php"
+        },
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
